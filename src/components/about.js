@@ -1,41 +1,70 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
-import ProgressBar from 'react-bootstrap/ProgressBar';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
+import ProgressBar from "react-bootstrap/ProgressBar";
 
-import img1 from '../assets/images/img1.jpg';
+import img1 from "../assets/images/img1.jpg";
 
 function AppAbout() {
-  const html = 80;
-  const responsive = 95;
-  const photoshop = 60;
+  const webDevelopment = 85;
+  const cloudServices = 90;
+  const cybersecurity = 75;
 
   return (
     <section id="about" className="block about-block">
       <Container fluid>
-        <div className="title-holder">
+        <div className="title-holder text-center mb-4">
           <h2>About Us</h2>
-          <div className="subtitle">learn more about us</div>
+          <div className="subtitle">Learn more about our IT expertise</div>
         </div>
-        <Row>
+        <Row className="align-items-center">
           <Col sm={6}>
-            <Image src={img1} />
+            <Image src={img1} fluid className="rounded shadow" />
           </Col>
           <Col sm={6}>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit dicta veritatis sint quidem asperiores magni eaque praesentium temporibus, magnam, eveniet consequatur possimus nihil? Nemo deserunt repudiandae soluta neque doloribus, quo!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae alias ex error distinctio laudantium recusandae, iure. Vel nisi soluta, minus consectetur reiciendis laborum, laudantium perspiciatis quos molestias quam eum.</p>
-            <div className='progress-block'>
-              <h4>HTML / CSS / Javascript</h4>
-              <ProgressBar now={html} label={`${html}%`} />
+            <p>
+              Kami adalah penyedia layanan teknologi informasi yang berfokus
+              pada inovasi dan solusi yang dirancang untuk membantu bisnis
+              berkembang di era digital. Dengan pendekatan berbasis teknologi
+              terkini, kami menawarkan berbagai layanan yang dirancang untuk
+              memenuhi kebutuhan bisnis modern.
+            </p>
+            <p>
+              Keahlian kami mencakup berbagai aspek mulai dari pengembangan web
+              hingga keamanan siber dan layanan cloud. Kami berkomitmen untuk
+              memberikan solusi yang aman, efisien, dan skalabel untuk mendukung
+              pertumbuhan dan kesuksesan jangka panjang bisnis Anda.
+            </p>
+            <div className="progress-block mt-4">
+              <h4>Web Development & Application Development</h4>
+              <ProgressBar
+                now={webDevelopment}
+                label={`${webDevelopment}%`}
+                animated
+                variant="info"
+                className="mb-3 rounded"
+              />
             </div>
-            <div className='progress-block'>
-              <h4>responsive</h4>
-              <ProgressBar now={responsive} label={`${responsive}%`} />
+            <div className="progress-block">
+              <h4>Cloud Services & Infrastructure Management</h4>
+              <ProgressBar
+                now={cloudServices}
+                label={`${cloudServices}%`}
+                animated
+                variant="success"
+                className="mb-3 rounded"
+              />
             </div>
-            <div className='progress-block'>
-              <h4>Photoshop</h4>
-              <ProgressBar now={photoshop} label={`${photoshop}%`} />
+            <div className="progress-block">
+              <h4>Cybersecurity & Data Protection</h4>
+              <ProgressBar
+                now={cybersecurity}
+                label={`${cybersecurity}%`}
+                animated
+                variant="warning"
+                className="rounded"
+              />
             </div>
           </Col>
         </Row>
